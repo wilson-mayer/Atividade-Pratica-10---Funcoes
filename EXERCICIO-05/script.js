@@ -5,5 +5,18 @@
 
 // Ex: 6 é perfeito, pois 6 = 1 + 2 + 3, que são seus divisores
 
-let valor = parseInt(prompt('Digite um valor:'));
+let valorRecebido = parseInt(prompt('Digite um valor:'));
+
+function valorPerfeito (valor) {
+    let soma = 0;
+    for (let i = 1; i < valor; i++) {
+        if (valor % i === 0) {
+            soma += i;
+        }
+    }
+    return soma === valor;
+}
+
+valorPerfeito()
+console.log(valorPerfeito(valorRecebido));
 
